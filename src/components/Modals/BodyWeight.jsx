@@ -20,12 +20,17 @@ export default function BodyWeight({ visible, setVisible, weight }) {
 
   const handleSubmit = async () => {
     try {
-      const { userData } = await updateBodyWeight({ username, value }).unwrap();
-      dispatch(setData({ userData }));
+      if (validValue) {
+        const { userData } = await updateBodyWeight({
+          username,
+          value,
+        }).unwrap();
+        dispatch(setData({ userData }));
+        closeModal();
+      }
     } catch (error) {
       console.error(error);
     }
-    closeModal();
   };
 
   if (isLoading) return <Skeleton />;
@@ -52,7 +57,7 @@ export default function BodyWeight({ visible, setVisible, weight }) {
         required
       />
 
-      <button type="button" className="btn mt-4" onClick={handleSubmit}>
+      <button type="submit" onClick={handleSubmit} className="btn mt-4">
         {EDIT}
       </button>
     </ModalWrapper>

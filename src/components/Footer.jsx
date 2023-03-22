@@ -50,7 +50,7 @@ export default function Footer() {
               {WEIGHT}: {userData?.weight} {KG}
             </button>
             {possibilityToAdd && (
-              <button onClick={handleAddToMealModal} className="clearBtn">
+              <button onClick={handleAddToMealModal} className="btn">
                 <PlusIcon />
               </button>
             )}
