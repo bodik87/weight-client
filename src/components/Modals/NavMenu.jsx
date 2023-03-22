@@ -36,9 +36,11 @@ export default function NavMenu({ visible, setVisible }) {
       // element.classList.toggle("dark");
       localStorage.theme = "dark";
       setDarkMode(!darkMode);
+      closeModal();
     } else {
       localStorage.theme = "light";
       setDarkMode(!darkMode);
+      closeModal();
     }
   }
 
