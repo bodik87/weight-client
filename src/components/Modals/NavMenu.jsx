@@ -1,7 +1,7 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { DARK_MODE, RECIPES, SETTINGS } from "../../assets/CONSTANTS";
+import { ABOUT, DARK_MODE, RECIPES, SETTINGS } from "../../assets/CONSTANTS";
 
 export default function NavMenu({ visible, setVisible }) {
   const navigate = useNavigate();
@@ -21,7 +21,7 @@ export default function NavMenu({ visible, setVisible }) {
   if (
     localStorage.theme === "dark" ||
     (!("theme" in localStorage) &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches)
+      window.matchMedia("(prefers-color-scheme: light)").matches)
   ) {
     document.documentElement.classList.add("dark");
   } else {
@@ -63,6 +63,15 @@ export default function NavMenu({ visible, setVisible }) {
               leaveTo="opacity-0 translate-y-3"
             >
               <Dialog.Panel className="max-w-xs overflow-hidden rounded-2xl shadow-lg transition-all">
+                <a href="https://portfolio-next13-nnoz.vercel.app/">
+                  <button
+                    type="button"
+                    onClick={darkModeToggle}
+                    className="menuItem"
+                  >
+                    {ABOUT}
+                  </button>
+                </a>
                 <button
                   type="button"
                   onClick={darkModeToggle}
