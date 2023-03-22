@@ -57,7 +57,7 @@ export default function BodyWeight({ visible, setVisible, weight }) {
         required
       />
 
-      <button type="submit" onClick={handleSubmit} className="btn mt-4">
+      <button type="button" onClick={handleSubmit} className="btn mt-4">
         {EDIT}
       </button>
     </ModalWrapper>
