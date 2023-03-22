@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  font-family: "Fira Sans", sans-serif;
+}
+
+@layer components {
+  body {
+    @apply bg-slate-200 dark:bg-[#222];
+  }
+  .text {
+    @apply text-gray-900 dark:text-white;
+  }
+  .btn {
+    @apply text-white bg-blue-700 hover:bg-blue-800 rounded-lg text-lg px-5 h-12 dark:bg-gray-100 dark:hover:bg-white outline-none dark:text-gray-900 transition-all;
+  }
+  .clearBtn {
+    @apply text-gray-900 bg-white/90 dark:bg-[#007ACC] active:bg-transparent border border-gray-400 outline-none hover:bg-gray-50 dark:hover:bg-[#218fd8] rounded-lg text-lg px-3 h-12 dark:text-white dark:border-transparent overflow-hidden transition-all select-none;
+  }
+  .title {
+    @apply block text-2xl text-gray-900 dark:text-gray-100 leading-none;
+  }
+  .label {
+    @apply block mb-2 text-base text-gray-900 dark:text-gray-200;
+  }
+  .input {
+    @apply bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 outline-blue-700 dark:bg-[#444] dark:outline-gray-400 dark:border-gray-400 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500;
+  }
+  .menuItem {
+    @apply flex w-full items-center px-8 py-4 bg-white text-xl select-none whitespace-nowrap hover:bg-blue-700 dark:bg-[#E4E4E4] dark:hover:bg-[#007ACC] transition-all hover:text-white cursor-pointer;
+  }
+  .btnsGroup {
+    @apply w-full flex justify-center px-4 py-2 bg-white/50 dark:bg-[#666] border-gray-300 shadow-md hover:bg-blue-700 hover:border-blue-700 dark:hover:border-gray-300 text-sm text-gray-900 hover:text-white dark:border-gray-300 dark:text-white dark:hover:text-white dark:hover:bg-[#888] dark:focus:bg-[#CE915B] gap-2 whitespace-nowrap transition-all;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 4px;
+  margin: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #dde4e6;
+  border-radius: 4px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 1;
+  display: block;
+  margin-left: -12px;
+}
+
+@media (prefers-color-scheme: dark) {
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    background-color: aliceblue;
+    border-radius: 4px;
+  }
+}
