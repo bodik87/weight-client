@@ -95,3 +95,4 @@ export const UNAUTH = "Такий користувач не зареєстров
 export const REGISTERED = "Це ім'я вже зайняте";
 export const AUTH = "Ви не авторизовані. Увійдіть спочатку в додаток";
 export const DARK_MODE = "Темний режим";
+export const PROMO = "Додаток для підрахунку калорій";

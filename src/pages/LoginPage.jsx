@@ -22,8 +22,8 @@ export default function LoginPage() {
 
   const userRef = useRef();
   const errRef = useRef();
-  const [username, setUsername] = useState("Bogdan");
-  const [password, setPassword] = useState("12345");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
   const [errMsg, setErrMsg] = useState("");
   const [persist, setPersist] = usePersist(true);
 
